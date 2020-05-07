@@ -9,7 +9,7 @@ pipeline{
              
 			 stages{
 
-              stage('Quality Gate Statuc Check'){
+              stage('Quality Gate Status Check'){
                   steps{
                       script{
                       withSonarQubeEnv('tmfsonarserver') { 
