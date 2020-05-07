@@ -15,6 +15,7 @@ pipeline{
                       withSonarQubeEnv('tmfsonarserver') { 
                       sh "mvn sonar:sonar"
                        }
+		      sleep(60)
                       timeout(time: 10, unit: 'MINUTES') {
                       def qg = waitForQualityGate()
                       if (qg.status != 'OK') {
